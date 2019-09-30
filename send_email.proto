@@ -1,0 +1,15 @@
+syntax="proto3";
+
+message Email{
+    string receiver=1;
+    string password = 2;
+    string message =3;
+    string sender=4;
+
+}
+message Response{
+    string response=1;
+}
+service SendEmail{
+    rpc send_email(Email) returns(Response){}
+}
